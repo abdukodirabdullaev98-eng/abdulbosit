@@ -283,3 +283,52 @@ nav {
 }
 
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #0a1a2f, #000);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.group {
+  background: #10243d;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 150, 255, 0.4);
+  transition: 0.3s;
+}
+
+.group:hover {
+  transform: scale(1.03);
+}
+
+.group h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #2e5c8a;
+  padding-bottom: 5px;
+}
+
+.team {
+  background: #1c3b5f;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.team:hover {
+  background: #2e5c8a;
+}
