@@ -370,26 +370,31 @@ body{
     align-content: center;
 }
 .card1{
+    align-items: 40px 35px;
     width: 800px;
-    background-color:rgb(175, 41, 0);
+    background-color:rgb(63, 12, 204);
     border-radius: 20px;
     margin-top: 20px;
 }
 .card2{
     width: 800px;
-    background-color:rgb(175, 41, 0);
+    background-color:rgb(15, 29, 225);
     border-radius: 20px;
     margin-top: 20px;
 }
 .card3{
     width: 800px;
-    background-color:rgb(175, 41, 0);
+    background-color:rgb(6, 24, 225);
     border-radius: 20px;
     margin-top: 20px;
 }
-.card4{ 
-    width: 800px;
-    background-color:rgb(55, 226, 43);
-    border-radius: 20px;
-    margin-top: 20px;
+.ded h3{
+    color: aliceblue;
+}
+.father-div2{
+    text-align: start;
+}
+.h3{
+    text-shadow: 18px 18px 4px #0722e8;
+    background-color: blueviolet;
 }

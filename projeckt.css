@@ -1,0 +1,308 @@
+.pack-icon { font-size: 2.8rem; margin-bottom: 16px; }
+.pack-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; }
+.pack-desc { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 18px; }
+
+.pack-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.btn-buy {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.pack-card.featured .btn-buy,
+.pack-card:hover .btn-buy {
+  background: var(--green);
+  color: #000;
+}
+
+.legend-section {
+  background: linear-gradient(to bottom, var(--bg), #0a0a0a);
+}
+
+.players-row {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green) transparent;
+}
+
+.player-card {
+  flex: 0 0 200px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  cursor: pointer;
+}
+.player-card:hover,
+.player-card.active {
+  border-color: var(--green);
+  box-shadow: 0 0 28px rgba(57,255,20,0.25);
+  transform: translateY(-6px);
+}
+
+.player-rating {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: var(--green);
+  line-height: 1;
+}
+
+.player-pos {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.player-flag { font-size: 1.2rem; margin-bottom: 6px; }
+
+.player-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: block;
+  background: #222;
+}
+
+.player-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.player-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: left;
+}
+.player-stats span b { color: var(--text); }
+
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--card-border);
+}
+:root {
+  --green: #39ff14;
+  --green-dark: #22cc00;
+  --gold: #f5a623;
+  --bg: #0d0d0d;
+  --card-bg: #181818;
+  --card-border: #2a2a2a;
+  --text: #ffffff;
+  --text-muted: #aaaaaa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: rgba(13,13,13,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(57,255,20,0.1);
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.logo span { color: var(--green); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--green); }
+
+.btn-nav {
+  background: var(--green);
+  color: #000 !important;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700 !important;
+  transition: 0.2s, transform 0.2s !important;
+}
+.btn-nav:hover {
+  background: var(--green-dark) !important;
+  transform: scale(1.04);
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1600&q=80') center/cover no-repeat;
+  filter: brightness(0.35) saturate(0.6);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(57,255,20,0.08) 0%, transparent 60%),
+              linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
+}
+
+.hero-ball {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-55%);
+  width: 280px;
+  opacity: 0.9;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(-55%); }
+  50%      { transform: translateY(-62%); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 24px;
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  line-height: 1;
+  color: var(--green);
+  text-shadow: 0 0 40px rgba(57,255,20,0.4);
+  letter-spacing: 3px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-sub {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 16px 48px;
+  background: #fff;
+  color: #000;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+.btn-hero:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(255,255,255,0.2);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+section { padding: 80px 48px; }
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 56px;
+  color: var(--text);
+}
+
+.packs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pack-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 32px 24px 24px;
+  text-align: center;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+}
+.pack-card:hover,
+.pack-card.featured {
+  border-color: var(--green);
+  box-shadow: 0 0 24px rgba(57,255,20,0.2);
+  transform: translateY(-6px);
+}
